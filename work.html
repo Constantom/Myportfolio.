@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects | Constance Tomessien</title>
+<link rel="stylesheet" href="style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="logo" href="index.html">CT</a>
+    <div class="nav-links">
+      <a href="index.html#work">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+  </nav>
+</header>
+
+<main>
+
+<section class="work-hero reveal">
+  <h1>My Projects</h1>
+  <p>All my selected projects, snapshots, and dashboards presented with clarity.</p>
+</section>
+
+<section class="projects-preview reveal">
+  <div class="section-title">
+    <h2>Projects</h2>
+    <p>Click any project card to view its snapshots and details.</p>
+  </div>
+
+  <div class="card-grid">
+
+    <a class="project-card" href="#finance">
+      <h3>Personal Finance Tracker</h3>
+      <p>Fintech · 2026</p>
+    </a>
+
+    <a class="project-card" href="#hr">
+      <h3>HR Dashboard [Pharmacy]</h3>
+      <p>Health · 2025</p>
+    </a>
+
+    <a class="project-card" href="#opsintel">
+      <h3>OpsIntel Dashboard</h3>
+      <p>Manufacturing · 2025</p>
+    </a>
+
+    <a class="project-card" href="#opsintel">
+      <h3>Nova-Ecommerce</h3>
+      <p>Commerce · 2026</p>
+    </a>
+
+  </div>
+</section>
+
+<section id="finance" class="project-section reveal">
+  <h2>Personal Finance Tracker</h2>
+  <p>Snapshots and insights from the project:</p>
+  <div class="snapshot-grid">
+<img src="snaps/finance1.png" alt="Finance Tracker Snapshot 1"/>
+<img src="snaps/finance2.png" alt="Finance Tracker Snapshot 1"/>
+<img src="snaps/finance3.png" alt="Finance Tracker Snapshot 1"/>
+<img src="snaps/finance4.png" alt="Finance Tracker Snapshot 1"/> 
+<img src="snaps/finance5.png" alt="Finance Tracker Snapshot 1"/>
+<img src="snaps/finance6.png" alt="Finance Tracker Snapshot 1"/>
+<img src="snaps/finance7.png" alt="Finance Tracker Snapshot 1"/>
+  </div>
+</section>
+
+<section id="hr" class="project-section reveal">
+  <h2>HR Dashboard [Pharmacy]</h2>
+  <p>Snapshots and insights from the HR dashboard project:</p>
+  <div class="snapshot-grid">
+    <img src="snaps/hr1.png" alt="HR Dashboard Snapshot 1"/>
+    <img src="snaps/hr2.png" alt="HR Dashboard Snapshot 2"/>
+    <img src="snaps/hr3.png" alt="HR Dashboard Snapshot 3"/>
+    <img src="snaps/hr4.png" alt="HR Dashboard Snapshot 2"/>
+    <img src="snaps/hr5.png" alt="HR Dashboard Snapshot 3"/>
+  </div>
+</section>
+
+<section id="opsintel" class="project-section reveal">
+  <h2>OpsIntel Dashboard</h2>
+  <p>Snapshots and insights from the OpsIntel dashboard:</p>
+  <div class="snapshot-grid">
+    <img src="snaps/ops1.png" alt="OpsIntel Snapshot 1"/>
+    <img src="snaps/ops2.png" alt="OpsIntel Snapshot 2"/>
+    <img src="snaps/ops3.png" alt="OpsIntel Snapshot 3"/>
+  </div>
+</section>
+
+<section id="opsintel" class="project-section reveal">
+  <h2>Nova-Ecommerce</h2>
+  <p>Snapshots and insights from the Nova-Ecommerce Website:</p>
+  <div class="snapshot-grid">
+    <img src="snaps\Home.png" alt="OpsIntel Snapshot 1"/>
+    <img src="snaps\Catalog.png" alt="OpsIntel Snapshot 2"/>
+    <img src="snaps\Product Details.png" alt="OpsIntel Snapshot 3"/>
+    <img src="snaps\Cart&Checkout and payment gateway.png" alt="OpsIntel Snapshot 3"/>
+    <img src="snaps\Order tracking status.png" alt="OpsIntel Snapshot 3"/>
+    <img src="snaps\Login and register with User Profile.png" alt="OpsIntel Snapshot 3"/>
+    <img src="snaps\Admin.png" alt="OpsIntel Snapshot 3"/>
+    <img src="snaps\Vendor.png" alt="OpsIntel Snapshot 3"/>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Constance Tomessien. Designed with care.</p>
+  <div class="footer-links">
+    <a href="index.html#work">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</footer>
+<!-- Image Lightbox Modal -->
+<div id="imageModal" class="image-modal">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
