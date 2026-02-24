@@ -1,15 +1,28 @@
-// Dark/Light mode toggle
+// Dark/Light mode toggle with persistence
 const themeToggle = document.getElementById("theme-toggle");
+
+// Load saved theme on page load
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+  document.documentElement.setAttribute("data-theme", savedTheme);
+  themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+}
+
+// Toggle theme
 themeToggle.addEventListener("click", () => {
-  if (document.documentElement.getAttribute("data-theme") === "dark") {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+
+  if (currentTheme === "dark") {
     document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
     themeToggle.textContent = "🌙";
   } else {
     document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
     themeToggle.textContent = "☀️";
   }
 });
-
 // Clickable work cards
 document.querySelectorAll(".work-card").forEach(card => {
   card.addEventListener("click", () => {
