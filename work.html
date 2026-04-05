@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Projects | Constance.Tomessien</title>
-<link rel="stylesheet" href="Styles/style.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Constance Tomessien</title>
+
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-05SJEJJDKQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-05SJEJJDKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-05SJEJJDKQ');
+  </script>
 
-  gtag('config', 'G-05SJEJJDKQ');
-</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Styles/style.css"/>
 </head>
-
 <body>
 
+<!-- SCROLL PROGRESS -->
+<div id="scroll-progress"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursor-follower"></div>
+
+<!-- NAV -->
 <header class="site-header">
   <nav class="nav">
     <a class="logo" href="index.html">CT</a>
@@ -29,148 +37,130 @@
       <a href="index.html#about">About</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#contact">Contact</a>
-       <a href="credentials.html">Credentials</a>
+      <a href="credentials.html">Credentials</a>
     </div>
-    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
   </nav>
 </header>
 
 <main>
-<section class="work-hero reveal">
-  <h1>My Projects</h1>
-  <p>All my selected projects, snapshots, and dashboards presented with clarity.</p>
-</section>
 
-<section class="projects-preview reveal">
-  <div class="section-title">
-    <h2>Projects</h2>
-    <p>Click any project card to view its snapshots and details.</p>
-  </div>
+  <!-- ─── PAGE HEADER ─────────────────────────────────────────────── -->
+  <section class="work-hero reveal">
+    <div class="section-label">Portfolio</div>
+    <h1>My <em>Projects</em></h1>
+    <p>All selected projects, snapshots, and dashboards presented with clarity.</p>
+  </section>
 
-  <div class="card-grid">
-    <!--<a class="project-card" href="#finance">
-      <h3>Personal Finance Tracker</h3>
-      <p>Fintech · 2026</p>
-    </a>
+  <!-- ─── PROJECT CARDS GRID ─────────────────────────────────────── -->
+  <section class="projects-preview reveal">
+    <div class="section-title">
+      <div class="section-label">Browse</div>
+      <h2>All Projects</h2>
+      <p>Click any project card to view its snapshots and details.</p>
+    </div>
 
-    <a class="project-card" href="#hr">
-      <h3>HR Dashboard [Pharmacy]</h3>
-      <p>Health · 2025</p>
-    </a>-->
-     <a class="project-card" href="#opsintel">
-      <h3>Growth, Sales & Strategic Analytics</h3>
-      <p>Sales · 2026</p>
-      <p>Tool: Excel</p>
-    </a>
+    <div class="card-grid">
+      <a class="project-card" href="#sales-analytics">
+        <div class="section-label" style="margin-bottom:0.5rem">Sales · 2025</div>
+        <h3>Growth, Sales &amp; Strategic Analytics</h3>
+        <p>Tool: Excel</p>
+      </a>
 
-    <a class="project-card" href="#opsintel">
-      <h3>Operational Intelligence & Performance Analytics</h3>
-      <p>Manufacturing · 2026</p>
-      <p>Tool: Excel/Looker Studio</p>
-    </a>
+      <a class="project-card" href="#opsintel">
+        <div class="section-label" style="margin-bottom:0.5rem">Manufacturing · 2026</div>
+        <h3>Operational Intelligence &amp; Performance Analytics</h3>
+        <p>Tool: Excel / Looker Studio</p>
+      </a>
 
-  <a class="project-card" href="#opsintel">
-      <h3>Retail Transaction Analytics</h3>
-      <p>Sales · 2026</p>
-      <p>Tool: Power BI</p>
-    </a>
+      <a class="project-card" href="#retail">
+        <div class="section-label" style="margin-bottom:0.5rem">Sales · 2026</div>
+        <h3>Retail Transaction Analytics</h3>
+        <p>Tool: Power BI</p>
+      </a>
 
-    <a class="project-card" href="#opsintel">
-      <h3>Manufacturing & Maintanance Intelligence</h3>
-      <p>Manufacturing · 2026</p>
-      <p>Tool: Power BI</p>
-    </a>
-  </div>
-  </div>
-</section>
+      <a class="project-card" href="#manufacturing">
+        <div class="section-label" style="margin-bottom:0.5rem">Manufacturing · 2026</div>
+        <h3>Manufacturing &amp; Maintenance Intelligence</h3>
+        <p>Tool: Power BI</p>
+      </a>
+    </div>
+  </section>
 
-<!--<section id="finance" class="project-section reveal">
-  <h2>Personal Finance Tracker</h2>
-  <p>Snapshots and insights from the project:</p>
-  <div class="snapshot-grid">
-<img src="snaps/finance1.png" alt="Finance Tracker Snapshot 1"/>
-<img src="snaps/finance2.png" alt="Finance Tracker Snapshot 1"/>
-<img src="snaps/finance3.png" alt="Finance Tracker Snapshot 1"/>
-<img src="snaps/finance4.png" alt="Finance Tracker Snapshot 1"/> 
-<img src="snaps/finance5.png" alt="Finance Tracker Snapshot 1"/>
-<img src="snaps/finance6.png" alt="Finance Tracker Snapshot 1"/>
-<img src="snaps/finance7.png" alt="Finance Tracker Snapshot 1"/>
-  </div>
-</section>
+  <!-- ─── PROJECT 1: SALES ANALYTICS ─────────────────────────────── -->
+  <section id="sales-analytics" class="project-section reveal">
+    <div class="section-label">Sales · Excel · 2025</div>
+    <h2>Growth, Sales &amp; Strategic Analytics</h2>
+    <p>Snapshots and insights from the Growth, Sales &amp; Strategic Analytics project:</p>
+    <div class="snapshot-grid">
+      <img src="snaps\Screenshot (43).png" alt="Sales Analytics Snapshot 1"/>
+      <img src="snaps\Screenshot (44).png" alt="Sales Analytics Snapshot 2"/>
+      <img src="snaps\Screenshot (45).png" alt="Sales Analytics Snapshot 3"/>
+    </div>
+    <div class="hero-actions" style="margin-top:0.5rem">
+      <a class="btn-outline" href="Executive_Pitch_Deck_Sales_Growth_Analytics_Constance_Tomessien (2).pptx" target="_blank">
+        Download Project Presentation →
+      </a>
+    </div>
+  </section>
 
-<section id="hr" class="project-section reveal">
-  <h2>HR Dashboard [Pharmacy]</h2>
-  <p>Snapshots and insights from the HR dashboard project:</p>
-  <div class="snapshot-grid">
-    <img src="snaps/hr1.png" alt="HR Dashboard Snapshot 1"/>
-    <img src="snaps/hr2.png" alt="HR Dashboard Snapshot 2"/>
-    <img src="snaps/hr3.png" alt="HR Dashboard Snapshot 3"/>
-    <img src="snaps/hr4.png" alt="HR Dashboard Snapshot 2"/>
-    <img src="snaps/hr5.png" alt="HR Dashboard Snapshot 3"/>
-  </div>
-</section>-->
-<section id="opsintel" class="project-section reveal">
-  <h2>Growth, Sales & Strategic Analytics</h2>
-  <p>Snapshots and insights from the Growth, Sales & Strategic Analytics:</p>
-  <div class="snapshot-grid">
-    <img src="snaps\Screenshot (43).png" alt="OpsIntel Snapshot 1"/>
-    <img src="snaps\Screenshot (44).png" alt="OpsIntel Snapshot 2"/>
-    <img src="snaps\Screenshot (45).png" alt="OpsIntel Snapshot 3"/>
-    <div class ="hero-actions">
-      <a class="secondary" href="Executive_Pitch_Deck_Sales_Growth_Analytics_Constance_Tomessien (2).pptx" target="_blank">Download Project Presentation</a></div>
-  </div>
-</section>
+  <!-- ─── PROJECT 2: OPERATIONAL INTELLIGENCE ─────────────────────── -->
+  <section id="opsintel" class="project-section reveal">
+    <div class="section-label">Manufacturing · Excel / Looker Studio · 2026</div>
+    <h2>Operational Intelligence &amp; Performance Analytics</h2>
+    <p>Snapshots and insights from the Operational Intelligence &amp; Performance Analytics project:</p>
+    <div class="snapshot-grid">
+      <img src="snaps/ops1.png" alt="OpsIntel Snapshot 1"/>
+      <img src="snaps/ops2.png" alt="OpsIntel Snapshot 2"/>
+      <img src="snaps/ops3.png" alt="OpsIntel Snapshot 3"/>
+      <img src="snaps/ops4.png" alt="OpsIntel Snapshot 4"/>
+      <img src="snaps/ops5.png" alt="OpsIntel Snapshot 5"/>
+      <img src="snaps/ops6.png" alt="OpsIntel Snapshot 6"/>
+    </div>
+  </section>
 
-<section id="opsintel" class="project-section reveal">
-  <h2>Operational Intelligence & Performance Analytics</h2>
-  <p>Snapshots and insights from the Operational Intelligence & Performance Analytics:</p>
-  <div class="snapshot-grid">
-    <img src="snaps/ops1.png" alt="OpsIntel Snapshot 1"/>
-    <img src="snaps/ops2.png" alt="OpsIntel Snapshot 2"/>
-    <img src="snaps/ops3.png" alt="OpsIntel Snapshot 3"/>
-    <img src="snaps/ops4.png" alt="OpsIntel Snapshot 3"/>
-    <img src="snaps/ops5.png" alt="OpsIntel Snapshot 3"/>
-    <img src="snaps/ops6.png" alt="OpsIntel Snapshot 3"/>
-  </div>
-</section>
+  <!-- ─── PROJECT 3: RETAIL ────────────────────────────────────────── -->
+  <section id="retail" class="project-section reveal">
+    <div class="section-label">Sales · Power BI · 2026</div>
+    <h2>Retail Transaction Analytics</h2>
+    <p>Snapshots and insights from the Retail Transaction Analytics project:</p>
+    <div class="snapshot-grid">
+      <img src="snaps/Retail_Transaction 2_19_2026 11_40_53 PM.png" alt="Retail Transaction Snapshot 1"/>
+      <img src="snaps/Retail_Transaction 2_20_2026 12_09_12 AM.png" alt="Retail Transaction Snapshot 2"/>
+    </div>
+  </section>
 
-<section id="opsintel" class="project-section reveal">
-  <h2>Retail Transaction Analytics</h2>
-  <p>Snapshots and insights from the Retail Transaction Analytics:</p>
-  <div class="snapshot-grid">
-    <img src="snaps/Retail_Transaction 2_19_2026 11_40_53 PM.png" alt="OpsIntel Snapshot 1"/>
-    <img src="snaps/Retail_Transaction 2_20_2026 12_09_12 AM.png" alt="OpsIntel Snapshot 2"/>
-  </div>
-</section>
+  <!-- ─── PROJECT 4: MANUFACTURING ────────────────────────────────── -->
+  <section id="manufacturing" class="project-section reveal">
+    <div class="section-label">Manufacturing · Power BI · 2026</div>
+    <h2>Manufacturing &amp; Maintenance Intelligence</h2>
+    <p>Snapshots and insights from the Manufacturing &amp; Maintenance Intelligence project:</p>
+    <div class="snapshot-grid">
+      <img src="snaps/Manufacturing 2.png" alt="Manufacturing Snapshot 1"/>
+      <img src="snaps/Manufacturing 3.png" alt="Manufacturing Snapshot 2"/>
+      <img src="snaps/Manufacturing.png" alt="Manufacturing Snapshot 3"/>
+    </div>
+  </section>
 
-<section id="opsintel" class="project-section reveal">
-  <h2>Manufacturing & Maintanance Intelligence</h2>
-  <p>Snapshots and insights from the Manufacturing & Maintanance Intelligence: </p>
-  <div class="snapshot-grid">
-    <img src="snaps/Manufacturing 2.png" alt="OpsIntel Snapshot 1"/>
-    <img src="snaps/Manufacturing 3.png" alt="OpsIntel Snapshot 2"/>
-    <img src="snaps/Manufacturing.png" alt="OpsIntel Snapshot 2"/>
-  </div>
-</section>
 </main>
 
 <footer class="site-footer">
   <p>© 2026 Constance Tomessien. Designed with Purpose.</p>
   <div class="footer-links">
-      <a href="index.html#work">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="credentials.html">Credentials</a>
+    <a href="index.html#work">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="credentials.html">Credentials</a>
   </div>
 </footer>
-<!-- Image Lightbox Modal -->
-<div id="imageModal" class="image-modal">
-  <span class="close-modal">&times;</span>
-  <img class="modal-content" id="modalImage">
+
+<!-- IMAGE LIGHTBOX MODAL -->
+<div id="imageModal" class="image-modal" role="dialog" aria-modal="true">
+  <span class="close-modal" aria-label="Close">&times;</span>
+  <img class="modal-content" id="modalImage" alt="Enlarged snapshot"/>
 </div>
 
 <script src="Styles/script.js"></script>
-
 </body>
 </html>

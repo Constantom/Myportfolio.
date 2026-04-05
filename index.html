@@ -1,234 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Portfolio | Constance.Tomessien</title>
-<link rel="stylesheet" href="Styles/style.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Constance Tomessien</title>
+
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-05SJEJJDKQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-05SJEJJDKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-05SJEJJDKQ');
+  </script>
 
-  gtag('config', 'G-05SJEJJDKQ');
-</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Styles/style.css"/>
 </head>
-
 <body>
+
+<!-- SCROLL PROGRESS -->
+<div id="scroll-progress"></div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursor-follower"></div>
+
+<!-- NAV -->
 <header class="site-header">
   <nav class="nav">
     <a class="logo" href="#top">CT</a>
     <div class="nav-links">
-       <a href="index.html#work">Home</a>
+      <a href="index.html#work">Home</a>
       <a href="index.html#about">About</a>
       <a href="index.html#services">Services</a>
       <a href="index.html#contact">Contact</a>
       <a href="work.html">Projects</a>
       <a href="credentials.html">Credentials</a>
     </div>
-    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
   </nav>
 </header>
 
 <main id="top">
 
-<section class="hero reveal">
-  <div class="hero-content">
-    <p class="eyebrow">Data Analyst | Business & Operations Intelligence</p>
-<h1>
-  I transform complex business, manufacturing, and sales data into clear insights that drive confident decisions and optimize overall operations.
-</h1>
-    <p class="lead">
-      I’m Constance Tomessien, a Data Analyst based in Lagos, Nigeria.
-I work with founders and product teams to transform raw data into actionable insights that drive smarter decisions and measurable growth.
+  <!-- ─── HERO ─────────────────────────────────────────────────── -->
+  <section class="hero reveal">
+    <div class="hero-content">
 
-My focus is on analytical problem-solving, building scalable data solutions, and translating complex datasets into clear, strategic insights that create real business impact.
-    </p>
-    <div class="hero-actions">
-      <a class="primary" href="#work">View projects</a>
-      <a href="credentials.html" class="Primary-btn">
-  View Credentials
-</a>
-
-     <a class="primary talk-btn" href="mailto:Esstancy@gmail.com">Let's Talk</a>
-    </div>
-    <div class="hero-stats">
-      <div>
-  <h3>3+</h3>
-  <p>Years in Data Analytics & Business Intelligence</p>
-</div>
-
-<div>
-  <h3>25+</h3>
-  <p>Dashboards & Analytical Reports Delivered</p>
-</div>
-      <!--<div>
-        <h3>8</h3>
-        <p>Happy partners</p>
-      </div>-->
-    </div>
-  </div>
-
-  <div class="hero-card">
-    <!-- Button over the hero image -->
-
-    <img src="Constance.jpg" alt="Portrait of Constance" class="hero-image"/>
-    <div class="card-content">
-      <p><strong>Currently:</strong> Data Analyst at Sevenup Bottling Company</p>
-      <p><strong>Open to Opportunities:</strong> Remote, On-site, and Contract roles in data analytics and business intelligence.</p>
-      <p><strong>Location:</strong> Ikeja, Lagos · Fulltime</p>
-    </div>
-  </div>
-</section>
-
-<section class="work reveal" id="work">
-  <div class="section-title">
-    <h2>Selected work</h2>
-   <p>Recent projects focused on strategic analysis, data storytelling, and delivering measurable</p>
-  </div>
-
-  <div class="work-grid">
-    <a class="work-card clickable">
-      <div class="work-meta">
-        <span>SALES</span>
-        <span>2025</span>
+      <div class="hero-eyebrow">
+        Data Analyst · Business &amp; Operations Intelligence
+        <span class="dot"></span>
       </div>
-      <h3>Growth, Sales & Strategic Analytics</h3>
-      <p>
-        Turning sales and financial data into clear insights that support smarter planning and revenue growth.
+
+      <h1>
+        I turn complex data into<br/>
+        <em>confident decisions</em><br/>
+        that move businesses forward.
+      </h1>
+
+      <p class="lead">
+        I'm Constance Tomessien, a Data Analyst based in Lagos, Nigeria.
+        I work with founders and product teams to transform raw data into
+        actionable insights that drive smarter decisions and measurable growth.
       </p>
-      <ul>
-        <li>Analyzed sales vs actual dispatch performance to highlight revenue variances</li>
-        <li>Developed revenue trend reports and financial performance dashboards</li>
-        <li>Built forecasting models to support business planning and scenario analysis</li>
-        <li>Delivered executive-ready reports focused on strategic decision-making</li>
-      </ul>
-    </a>
 
-    <a class="work-card clickable">
-      <div class="work-meta">
-        <span>MANUFACTURING</span>
-        <span>2026</span>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#work">View Projects</a>
+        <a class="btn-outline" href="credentials.html">View Credentials</a>
+        <a class="btn-outline Primary-btn talk-btn" href="mailto:Esstancy@gmail.com">Let's Talk</a>
       </div>
-     <h3>Operational Intelligence & Performance Analytics</h3>
-      <p>
-        Driving operational efficiency through structured KPI tracking, variance analysis, and performance optimization.
-      </p>
-      <ul>
-        <li>Analyzed manufacturing KPIs including downtime, hot issues, and corrective actions</li>
-        <li>Tracked production vs business plan to identify performance gaps and root causes</li>
-        <li>Monitored material yield to reduce losses and improve process efficiency</li>
-        <li>Built dashboards for finished goods allocation and budget control</li>
-      </ul>
-    </a>
 
-
-    <a class="work-card clickable">
-      <div class="work-meta">
-        <span>SALES</span>
-        <span>2026</span>
+      <div class="hero-stats">
+        <div class="stat">
+          <h3><span class="count" data-target="3">0</span><span class="plus">+</span></h3>
+          <p>Years in Data Analytics &amp; Business Intelligence</p>
+        </div>
+        <div class="stat">
+          <h3><span class="count" data-target="25">0</span><span class="plus">+</span></h3>
+          <p>Dashboards &amp; Analytical Reports Delivered</p>
+        </div>
       </div>
-      <h3>Retail Transaction Analytics</h3>
-      <p>
-        Interactive retail transaction dashboard designed to provide clear visibility into sales performance, profitability, and customer behavior.
-      </p>
-      <ul>
-        <li>Centralized KPI dashboard tracking Revenue, Profit, Margin %, and AOV</li>
-        <li>Sales trend analysis, regional performance insights, and top product identification</li>
-        <li>Discount impact evaluation to uncover profit leakages and optimization opportunities</li>
-      </ul>
-    </a>
+    </div>
 
-     <!--<a class="work-card clickable">
-      <div class="work-meta">
-        <span>E-Commerce</span>
-        <span>2026</span>
+    <div class="hero-card">
+      <a class="talk-btn" href="mailto:Esstancy@gmail.com">Let's Talk →</a>
+      <img src="Constance.jpg" alt="Portrait of Constance Tomessien" class="hero-image"/>
+
+      <div class="status-badge">
+        <span class="dot"></span> Open to Opportunities
       </div>
-      <h3>E-Commerce Web Platform</h3>
-        <p>
-             A scalable online storefront designed to optimize product discovery, streamline checkout, and improve overall customer experience.
-        </p>
+
+      <div class="card-content">
+        <p><strong>Currently:</strong> Data Analyst at Sevenup Bottling Company</p>
+        <p><strong>Open to:</strong> Remote, On-site &amp; Contract roles</p>
+        <p><strong>Location:</strong> Ikeja, Lagos · Fulltime</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SELECTED WORK ─────────────────────────────────────────── -->
+  <section class="work reveal" id="work">
+    <div class="section-title">
+      <div class="section-label">Selected Work</div>
+      <h2>Turning data into direction.</h2>
+      <p>Recent projects focused on strategic analysis, data storytelling, and measurable outcomes.</p>
+    </div>
+
+    <div class="work-grid">
+
+      <a class="work-card clickable">
+        <div class="work-meta">
+          <span>SALES</span>
+          <span>2025</span>
+        </div>
+        <h3>Growth, Sales &amp; Strategic Analytics</h3>
+        <p>Turning sales and financial data into clear insights that support smarter planning and revenue growth.</p>
         <ul>
-            <li>Dynamic product catalog with category filtering and search</li>
-            <li>Secure cart and checkout workflow</li>
-            <li>Admin dashboard for product and order management</li>
+          <li>Analyzed sales vs actual dispatch performance to highlight revenue variances</li>
+          <li>Developed revenue trend reports and financial performance dashboards</li>
+          <li>Built forecasting models to support business planning and scenario analysis</li>
+          <li>Delivered executive-ready reports focused on strategic decision-making</li>
         </ul>
+      </a>
 
-        </a>-->
+      <a class="work-card clickable">
+        <div class="work-meta">
+          <span>MANUFACTURING</span>
+          <span>2026</span>
+        </div>
+        <h3>Operational Intelligence &amp; Performance Analytics</h3>
+        <p>Driving operational efficiency through structured KPI tracking, variance analysis, and performance optimization.</p>
+        <ul>
+          <li>Analyzed manufacturing KPIs including downtime, hot issues, and corrective actions</li>
+          <li>Tracked production vs business plan to identify performance gaps and root causes</li>
+          <li>Monitored material yield to reduce losses and improve process efficiency</li>
+          <li>Built dashboards for finished goods allocation and budget control</li>
+        </ul>
+      </a>
 
-  </div>
-</section>
+      <a class="work-card clickable">
+        <div class="work-meta">
+          <span>SALES</span>
+          <span>2026</span>
+        </div>
+        <h3>Retail Transaction Analytics</h3>
+        <p>Interactive retail transaction dashboard designed to provide clear visibility into sales performance, profitability, and customer behavior.</p>
+        <ul>
+          <li>Centralized KPI dashboard tracking Revenue, Profit, Margin %, and AOV</li>
+          <li>Sales trend analysis, regional performance insights, and top product identification</li>
+          <li>Discount impact evaluation to uncover profit leakages and optimization opportunities</li>
+        </ul>
+      </a>
 
-<section class="about reveal" id="about">
-  <div class="section-title">
-    <h2>About me</h2>
-    <p>Analyzing with clarity, curiosity, and a focus on measurable impact.</p>
-  </div>
-  <div class="about-grid">
-    <div>
-      <p>
-        I use data to uncover insights that drive smarter decisions and sustainable growth.
-        I enjoy translating complex datasets into clear findings backed by thoughtful analysis.
-      </p>
-      <p>
-        I like working with teams that value accuracy, strategy, and measurable impact.
-        When I'm not analyzing data, I'm learning new tools and refining analytical solutions.
-      </p>
     </div>
+  </section>
 
-    <div class="about-list">
-    <h3>Toolbox</h3>
-      <ul>
-        <li>Excel</li>
-        <li>Data analysis & statistical modeling</li>
-        <li>Power BI / Looker Studio</li>
-        <li>Data cleaning(Power Query), transformation & ETL processes</li>
-        <li>Dashboard development & performance reporting</li>
-      </ul>
+  <!-- ─── ABOUT ──────────────────────────────────────────────────── -->
+  <section class="about reveal" id="about">
+    <div class="section-title">
+      <div class="section-label">About Me</div>
+      <h2>Analyzing with clarity, curiosity,<br/>&amp; measurable impact.</h2>
     </div>
-  </div>
-</section>
+    <div class="about-grid">
+      <div>
+        <p>
+          I use data to uncover insights that drive smarter decisions and sustainable growth.
+          I enjoy translating complex datasets into clear findings backed by thoughtful analysis.
+        </p>
+        <p>
+          I like working with teams that value accuracy, strategy, and measurable impact.
+          When I'm not analyzing data, I'm learning new tools and refining analytical solutions.
+        </p>
+      </div>
+      <div class="about-list">
+        <h3>Toolbox</h3>
+        <ul>
+          <li>Excel — Advanced analytics &amp; statistical modeling</li>
+          <li>Power BI / Looker Studio — Dashboard development</li>
+          <li>Power Query — Data cleaning, transformation &amp; ETL</li>
+          <li>Performance reporting &amp; executive presentations</li>
+          <li>KPI frameworks &amp; variance analysis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section class="services reveal" id="services">
-  <div class="section-title">
-    <h2>Services</h2>
-    <p>Flexible engagements from idea to impact.</p>
-  </div>
-  <div class="service-grid">
-    <div class="service-card">
-      <h3>Sales & Growth Analytics</h3>
-      <p>Analyzing revenue trends, target performance, and customer segments to uncover opportunities that accelerate business growth.</p>
+  <!-- ─── SERVICES ──────────────────────────────────────────────── -->
+  <section class="services reveal" id="services">
+    <div class="section-title">
+      <div class="section-label">Services</div>
+      <h2>Flexible engagements from<br/>idea to measurable impact.</h2>
     </div>
-    <div class="service-card">
-      <h3>Operational Performance Analytics</h3>
-      <p>Monitoring KPIs, process efficiency, and variance metrics to optimize operations and improve overall performance.</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-number">01</div>
+        <h3>Sales &amp; Growth Analytics</h3>
+        <p>Analyzing revenue trends, target performance, and customer segments to uncover opportunities that accelerate business growth.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-number">02</div>
+        <h3>Operational Performance Analytics</h3>
+        <p>Monitoring KPIs, process efficiency, and variance metrics to optimize operations and improve overall performance.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-number">03</div>
+        <h3>Dashboard &amp; Reporting Solutions</h3>
+        <p>Designing dynamic, data-driven dashboards that transform complex datasets into clear, actionable executive insights.</p>
+      </div>
     </div>
-    <div class="service-card">
-      <h3>Dashboard & Reporting Solutions</h3>
-      <p>Designing dynamic, data-driven dashboards that transform complex datasets into clear, actionable executive insights.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="contact reveal" id="contact">
-<div>
-  <h2>Let’s Work With Your Data</h2>
-  <p>
-    I’m available for remote roles, contract opportunities, and freelance analytics projects. 
-    If you need clear dashboards, accurate reporting, or data-driven insights to support decision-making, let’s connect.
-  </p>
-  <a href="mailto:esstancy@gmail.com?subject=Data%20Analytics%20Opportunity">
-    Get In Touch
-  </a>
-</div>
-
-  </div>
-</section>
+  <!-- ─── CONTACT ────────────────────────────────────────────────── -->
+  <section class="contact reveal" id="contact">
+    <h2>Let's Work With Your Data</h2>
+    <p>
+      I'm available for remote roles, contract opportunities, and freelance analytics projects.
+      If you need clear dashboards, accurate reporting, or data-driven insights to support decision-making, let's connect.
+    </p>
+    <a href="mailto:esstancy@gmail.com?subject=Data%20Analytics%20Opportunity">
+      Get In Touch →
+    </a>
+  </section>
 
 </main>
 
@@ -237,9 +232,12 @@ My focus is on analytical problem-solving, building scalable data solutions, and
   <div class="footer-links">
     <a href="#work">Projects</a>
     <a href="#about">About</a>
+    <a href="#services">Services</a>
     <a href="#contact">Contact</a>
+    <a href="credentials.html">Credentials</a>
   </div>
 </footer>
+
 <script src="Styles/script.js"></script>
 </body>
 </html>
