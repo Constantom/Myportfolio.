@@ -1,34 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio | Constance Tomessien</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-05SJEJJDKQ"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer=window.dataLayer||[];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-05SJEJJDKQ');
+    gtag('js',new Date());
+    gtag('config','G-05SJEJJDKQ');
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="Styles/style.css"/>
 </head>
 <body>
 
-<!-- SCROLL PROGRESS -->
-<div id="scroll-progress"></div>
+<!-- ░░ CINEMATIC INTRO SPLASH ░░ -->
+<div id="intro">
+  <div class="bar-top"></div>
+  <div class="bar-bottom"></div>
+  <div class="intro-inner">
+    <div class="intro-scan"></div>
+    <div class="intro-initials">CT</div>
+    <div class="intro-name">Constance Tomessien</div>
+    <div class="intro-role">Data Analyst · Lagos, Nigeria</div>
+    <div class="intro-progress-track">
+      <div class="intro-progress-fill"></div>
+    </div>
+  </div>
+</div>
 
-<!-- CUSTOM CURSOR -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-follower" id="cursor-follower"></div>
+<!-- ░░ FILM GRAIN ░░ -->
+<div class="film-grain" aria-hidden="true"></div>
 
-<!-- NAV -->
+<!-- ░░ SCROLL PROGRESS ░░ -->
+<div id="scroll-bar" aria-hidden="true"></div>
+
+<!-- ░░ PAGE VEIL TRANSITION ░░ -->
+<div id="page-veil" aria-hidden="true"></div>
+
+<!-- ░░ CUSTOM CURSOR ░░ -->
+<div class="c-cursor" aria-hidden="true">
+  <div class="c-dot" id="cursor-dot"></div>
+  <div class="c-ring" id="cursor-ring">
+    <span class="c-label">View</span>
+  </div>
+</div>
+
+<!-- ░░░ NAV ░░░ -->
 <header class="site-header">
   <nav class="nav">
     <a class="logo" href="#top">CT</a>
@@ -46,13 +71,16 @@
 
 <main id="top">
 
-  <!-- ─── HERO ─────────────────────────────────────────────────── -->
-  <section class="hero reveal">
-    <div class="hero-content">
+  <!-- ━━━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
 
+    <div class="hero-content">
       <div class="hero-eyebrow">
         Data Analyst · Business &amp; Operations Intelligence
-        <span class="dot"></span>
+        <span class="live-dot"></span>
       </div>
 
       <h1>
@@ -67,18 +95,18 @@
         actionable insights that drive smarter decisions and measurable growth.
       </p>
 
-      <div class="hero-actions">
-        <a class="btn-primary" href="#work">View Projects</a>
-        <a class="btn-outline" href="credentials.html">View Credentials</a>
-        <a class="btn-outline Primary-btn talk-btn" href="mailto:Esstancy@gmail.com">Let's Talk</a>
+      <div class="hero-cta">
+        <a class="mag-btn primary" href="#work">View Projects</a>
+        <a class="mag-btn outline" href="credentials.html">Credentials</a>
+        <a class="mag-btn outline" href="mailto:Esstancy@gmail.com">Let's Talk</a>
       </div>
 
       <div class="hero-stats">
-        <div class="stat">
+        <div>
           <h3><span class="count" data-target="3">0</span><span class="plus">+</span></h3>
           <p>Years in Data Analytics &amp; Business Intelligence</p>
         </div>
-        <div class="stat">
+        <div>
           <h3><span class="count" data-target="25">0</span><span class="plus">+</span></h3>
           <p>Dashboards &amp; Analytical Reports Delivered</p>
         </div>
@@ -87,12 +115,12 @@
 
     <div class="hero-card">
       <a class="talk-btn" href="mailto:Esstancy@gmail.com">Let's Talk →</a>
-      <img src="Constance.jpg" alt="Portrait of Constance Tomessien" class="hero-image"/>
-
-      <div class="status-badge">
-        <span class="dot"></span> Open to Opportunities
+      <div class="hero-image-wrap">
+        <img src="Constance.jpg" alt="Portrait of Constance Tomessien" class="hero-image"/>
       </div>
-
+      <div class="status-pill">
+        <span class="live-dot"></span> Open to Opportunities
+      </div>
       <div class="card-content">
         <p><strong>Currently:</strong> Data Analyst at Sevenup Bottling Company</p>
         <p><strong>Open to:</strong> Remote, On-site &amp; Contract roles</p>
@@ -101,20 +129,21 @@
     </div>
   </section>
 
-  <!-- ─── SELECTED WORK ─────────────────────────────────────────── -->
-  <section class="work reveal" id="work">
+  <!-- ━━━━ SELECTED WORK ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="section-wrap reveal" id="work">
     <div class="section-title">
-      <div class="section-label">Selected Work</div>
-      <h2>Turning data into direction.</h2>
+      <div class="section-eyebrow">Selected Work</div>
+      <h2>Turning data into <em>direction.</em></h2>
       <p>Recent projects focused on strategic analysis, data storytelling, and measurable outcomes.</p>
     </div>
 
     <div class="work-grid">
 
       <a class="work-card clickable">
+        <div class="card-glow" aria-hidden="true"></div>
         <div class="work-meta">
-          <span>SALES</span>
-          <span>2025</span>
+          <span class="tag">Sales</span>
+          <span class="year">2025</span>
         </div>
         <h3>Growth, Sales &amp; Strategic Analytics</h3>
         <p>Turning sales and financial data into clear insights that support smarter planning and revenue growth.</p>
@@ -127,9 +156,10 @@
       </a>
 
       <a class="work-card clickable">
+        <div class="card-glow" aria-hidden="true"></div>
         <div class="work-meta">
-          <span>MANUFACTURING</span>
-          <span>2026</span>
+          <span class="tag">Manufacturing</span>
+          <span class="year">2026</span>
         </div>
         <h3>Operational Intelligence &amp; Performance Analytics</h3>
         <p>Driving operational efficiency through structured KPI tracking, variance analysis, and performance optimization.</p>
@@ -142,12 +172,13 @@
       </a>
 
       <a class="work-card clickable">
+        <div class="card-glow" aria-hidden="true"></div>
         <div class="work-meta">
-          <span>SALES</span>
-          <span>2026</span>
+          <span class="tag">Sales</span>
+          <span class="year">2026</span>
         </div>
         <h3>Retail Transaction Analytics</h3>
-        <p>Interactive retail transaction dashboard designed to provide clear visibility into sales performance, profitability, and customer behavior.</p>
+        <p>Interactive retail transaction dashboard providing clear visibility into sales performance, profitability, and customer behavior.</p>
         <ul>
           <li>Centralized KPI dashboard tracking Revenue, Profit, Margin %, and AOV</li>
           <li>Sales trend analysis, regional performance insights, and top product identification</li>
@@ -158,14 +189,14 @@
     </div>
   </section>
 
-  <!-- ─── ABOUT ──────────────────────────────────────────────────── -->
-  <section class="about reveal" id="about">
+  <!-- ━━━━ ABOUT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="section-wrap reveal" id="about">
     <div class="section-title">
-      <div class="section-label">About Me</div>
-      <h2>Analyzing with clarity, curiosity,<br/>&amp; measurable impact.</h2>
+      <div class="section-eyebrow">About Me</div>
+      <h2>Analyzing with clarity,<br/><em>curiosity,</em> &amp; measurable impact.</h2>
     </div>
     <div class="about-grid">
-      <div>
+      <div class="about-text">
         <p>
           I use data to uncover insights that drive smarter decisions and sustainable growth.
           I enjoy translating complex datasets into clear findings backed by thoughtful analysis.
@@ -181,48 +212,51 @@
           <li>Excel — Advanced analytics &amp; statistical modeling</li>
           <li>Power BI / Looker Studio — Dashboard development</li>
           <li>Power Query — Data cleaning, transformation &amp; ETL</li>
-          <li>Performance reporting &amp; executive presentations</li>
-          <li>KPI frameworks &amp; variance analysis</li>
+          <li>Performance reporting &amp; KPI frameworks</li>
+          <li>Variance analysis &amp; executive presentations</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ─── SERVICES ──────────────────────────────────────────────── -->
-  <section class="services reveal" id="services">
+  <!-- ━━━━ SERVICES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="section-wrap reveal" id="services">
     <div class="section-title">
-      <div class="section-label">Services</div>
-      <h2>Flexible engagements from<br/>idea to measurable impact.</h2>
+      <div class="section-eyebrow">Services</div>
+      <h2>Flexible engagements from<br/><em>idea to impact.</em></h2>
     </div>
     <div class="service-grid">
       <div class="service-card">
-        <div class="service-number">01</div>
+        <div class="service-num">01</div>
         <h3>Sales &amp; Growth Analytics</h3>
         <p>Analyzing revenue trends, target performance, and customer segments to uncover opportunities that accelerate business growth.</p>
       </div>
       <div class="service-card">
-        <div class="service-number">02</div>
+        <div class="service-num">02</div>
         <h3>Operational Performance Analytics</h3>
         <p>Monitoring KPIs, process efficiency, and variance metrics to optimize operations and improve overall performance.</p>
       </div>
       <div class="service-card">
-        <div class="service-number">03</div>
+        <div class="service-num">03</div>
         <h3>Dashboard &amp; Reporting Solutions</h3>
         <p>Designing dynamic, data-driven dashboards that transform complex datasets into clear, actionable executive insights.</p>
       </div>
     </div>
   </section>
 
-  <!-- ─── CONTACT ────────────────────────────────────────────────── -->
-  <section class="contact reveal" id="contact">
-    <h2>Let's Work With Your Data</h2>
-    <p>
-      I'm available for remote roles, contract opportunities, and freelance analytics projects.
-      If you need clear dashboards, accurate reporting, or data-driven insights to support decision-making, let's connect.
-    </p>
-    <a href="mailto:esstancy@gmail.com?subject=Data%20Analytics%20Opportunity">
-      Get In Touch →
-    </a>
+  <!-- ━━━━ CONTACT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="contact-section reveal" id="contact">
+    <div class="contact-inner">
+      <h2>Let's Work With <em>Your Data</em></h2>
+      <p>
+        I'm available for remote roles, contract opportunities, and freelance analytics projects.
+        If you need clear dashboards, accurate reporting, or data-driven insights to support
+        decision-making, let's connect.
+      </p>
+      <a href="mailto:esstancy@gmail.com?subject=Data%20Analytics%20Opportunity">
+        Get In Touch →
+      </a>
+    </div>
   </section>
 
 </main>
