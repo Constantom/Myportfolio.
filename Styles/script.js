@@ -13,12 +13,18 @@ const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 const lerp  = (a, b, t) => a + (b - a) * t;
 const map   = (v, i1, i2, o1, o2) => o1 + ((v - i1) / (i2 - i1)) * (o2 - o1);
 
+/* ─── CRITICAL: Prevent browser scroll restoration & force top ──── */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+document.documentElement.scrollTop = 0;
+document.body.scrollTop = 0;
+
 
 /* ═══════════════════════════════════════════════════════════════════
    1 ▸ THEME TOGGLE
    ═══════════════════════════════════════════════════════════════════ */
 const themeBtn   = $('#theme-toggle');
-const savedTheme = localStorage.getItem('ct-theme') || 'light';
+const savedTheme = localStorage.getItem('ct-theme') || 'dark';
 
 document.documentElement.setAttribute('data-theme', savedTheme);
 if (themeBtn) themeBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
@@ -39,6 +45,12 @@ if (themeBtn) {
 const intro = $('#intro');
 
 if (intro) {
+  /* Lock ALL scrolling while the intro is playing */
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
+  /* Hammer scroll to top — browsers sometimes restore position */
+  window.scrollTo(0, 0);
+
   // Begin exit sequence at 3.2s
   setTimeout(() => {
     // Lift letterbox bars
@@ -52,8 +64,17 @@ if (intro) {
       const header = $('.site-header');
       if (header) header.classList.add('nav-visible');
 
-      // Fire hero entrance after panel clears
+      // After panel clears, FORCE scroll to absolute top then unlock
       setTimeout(() => {
+        /* Ensure we are at pixel 0 before removing the intro */
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+
+        /* Unlock scroll */
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+
         intro.remove();
         triggerHeroEntrance();
       }, 850);
@@ -66,9 +87,7 @@ if (intro) {
     header.style.transition = 'none';
     header.style.opacity = '1';
     header.style.transform = 'translateY(0)';
-    setTimeout(() => {
-      header.style.transition = '';
-    }, 50);
+    setTimeout(() => { header.style.transition = ''; }, 50);
   }
   triggerHeroEntrance();
 }
@@ -487,5 +506,48 @@ if (hero) {
     const y = ((e.clientY - rect.top)  / rect.height) * 100;
     hero.style.setProperty('--mx', x + '%');
     hero.style.setProperty('--my', y + '%');
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   17 ▸ MOBILE HAMBURGER MENU
+   ═══════════════════════════════════════════════════════════════════ */
+const hamburger  = $('#hamburger');
+const mobileMenu = $('#mobile-menu');
+const mobileOverlay = $('#mobile-overlay');
+
+if (hamburger && mobileMenu) {
+  const openMenu = () => {
+    mobileMenu.classList.add('open');
+    mobileOverlay.classList.add('open');
+    hamburger.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    hamburger.setAttribute('aria-expanded', 'true');
+  };
+  const closeMenu = () => {
+    mobileMenu.classList.remove('open');
+    mobileOverlay.classList.remove('open');
+    hamburger.classList.remove('active');
+    document.body.style.overflow = '';
+    hamburger.setAttribute('aria-expanded', 'false');
+  };
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.contains('active') ? closeMenu() : openMenu();
+  });
+
+  // Close when a link is tapped
+  $$('#mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  // Close on overlay tap
+  if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+
+  // Close on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMenu();
   });
 }

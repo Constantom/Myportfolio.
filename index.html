@@ -18,6 +18,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="Styles/style.css"/>
+  <!-- Prevent browser scroll restoration before JS loads -->
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+  </script>
 </head>
 <body>
 
@@ -65,9 +70,28 @@
       <a href="work.html">Projects</a>
       <a href="credentials.html">Credentials</a>
     </div>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <div style="display:flex;align-items:center;gap:0.6rem;">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 </header>
+
+<!-- ░░ MOBILE MENU OVERLAY ░░ -->
+<div id="mobile-overlay" aria-hidden="true"></div>
+
+<!-- ░░ MOBILE DRAWER ░░ -->
+<nav id="mobile-menu" aria-label="Mobile navigation">
+  <a href="index.html#work">Home</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#services">Services</a>
+  <a href="work.html">Projects</a>
+  <a href="credentials.html">Credentials</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="mailto:Esstancy@gmail.com" class="mobile-cta">Let's Talk →</a>
+</nav>
 
 <main id="top">
 

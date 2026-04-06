@@ -39,9 +39,25 @@
       <a href="index.html#contact">Contact</a>
       <a href="credentials.html">Credentials</a>
     </div>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <div style="display:flex;align-items:center;gap:0.6rem;">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 </header>
+
+<div id="mobile-overlay" aria-hidden="true"></div>
+<nav id="mobile-menu" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#services">Services</a>
+  <a href="work.html">Projects</a>
+  <a href="credentials.html">Credentials</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="mailto:Esstancy@gmail.com" class="mobile-cta">Let's Talk →</a>
+</nav>
 
 <main>
 
